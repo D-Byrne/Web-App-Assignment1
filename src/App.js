@@ -1,28 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import NewsList from "./components/newsList/";
+import Form from "./components/newsForm/";
+import api from "./dataStore/stubAPI";
+import _ from "lodash";
+import "./App.css";
 
-class App extends Component {
+export default class App extends Component {
+  incrementUpvote = id => {
+    api.upvote(id);
+    this.setState({});
+  };
+  addNewsItem = (title, year, author, link) => {
+    api.add(title, year, author, link);
+    this.setState({});
+  };
   render() {
+    let posts = _.sortBy(api.getAll(), post => -post.upvotes);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="container-fluid" class="backClr">
+        <div className="row">
+          <div className="col-md-8 offset-2 ">
+            <Form handleAdd={this.addNewsItem} />
+          </div>
+        </div>
+        <div>
+          <div className="col-md-8 offset-2">
+            <NewsList posts={posts} upvoteHandler={this.incrementUpvote} />
+          </div>
+        </div>
       </div>
     );
   }
 }
-
-export default App;
