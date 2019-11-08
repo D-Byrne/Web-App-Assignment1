@@ -5,67 +5,67 @@ class StubAPI {
         this.posts = [
         {
             id: 1,
-            title: "Why You Can No Longer Get Lost in the Crowd",
-            year: 1990,
-            link: "https://www.nytimes.com/2019/04/17/opinion/data-privacy.html",
-            author: "Woodrow Hartzog",
+            title: "Gotta Get Theroux This",
+            year: 2019,
+            link: "https://www.easons.com/gotta-get-theroux-this-louis-theroux-9781509880386",
+            author: "Louis Theroux",
             comments: [],
             upvotes: 10
         },
         {
             id: 2,
-            title: "Samsung's folding phone breaks for reviewers",
+            title: "Blue Moon",
             year: 1990,
-            link: "https://www.bbc.com/news/technology-47970788",
-            author: "Dave Lee",
+            link: "https://www.easons.com/5637150827/all/books/fiction/crime-fiction/blue-moon-tpb/",
+            author: "Lee Child",
             comments: [],
             upvotes: 14
         },
         {
             id: 3,
             title:
-            "Microsoft turned down facial-recognition sales on human rights concerns",
-            year: 1990,
-            link: null,
-            author: "Joseph Mennn",
+            "A Game of Thrones",
+            year: 1996,
+            link: "https://www.easons.com/a-game-of-thrones-george-r-r-martin-9780007448036",
+            author: "George R. R Martin ",
             comments: [],
             upvotes: 12
         },
         {
             id: 4,
             title:
-            "Follow-up: I found two identical packs of Skittles, among 468 packs with a total of 27,740 Skittles",
-            year: 1990,
-            link: "https://possiblywrong.wordpress.com/",
-            author: "unknown",
+            "War And Peace",
+            year: 1869,
+            link: "https://www.easons.com/war-and-peace-leo-tolstoy-9780099512240",
+            author: "Leo Tolstoy",
             comments: [],
             upvotes: 2
         },
         {
             id: 5,
-            title: "THE COMING DESERT",
-            year: 1990,
+            title: "The Count of Monte Cristo",
+            year: 1844,
             link:
-            "https://newleftreview.org/issues/II97/articles/mike-davis-the-coming-desert",
-            author: "MIKE DAVIS",
+            "https://www.easons.com/the-count-of-monte-cristo-alexandre-dumas-9781841593203",
+            author: "Alexandre Dumas",
             comments: [],
             upvotes: 8
         },
         {
             id: 6,
-            title: "Sleep myths 'damaging your health'",
-            year: 1990,
-            link: "https://www.bbc.com/news/health-47937405",
-            author: "James Gallagher",
+            title: "Ulysses",
+            year: 1922,
+            link: "https://www.easons.com/ulysses-james-joyce-9781847175908",
+            author: "James Joyce",
             comments: [],
             upvotes: 10
         },
         {
             id: 7,
-            title: "Planet’s ocean-plastics problem detailed in 60-year data set",
-            year: 1990,
-            link: "https://www.nature.com/articles/d41586-019-01252-0",
-            author: "Matthew Warren",
+            title: "Moby-Dick",
+            year: 1851,
+            link: "https://www.easons.com/moby-dick-herman-melville-9780143124672",
+            author: "Herman Melville",
             comments: [],
             upvotes: 20
         }
