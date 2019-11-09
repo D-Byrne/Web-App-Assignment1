@@ -4,31 +4,43 @@ import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import CommentPage from "./components/commentPage";
-import "./index.css"
+import "./index.css";
+import Login from "./components/loginPage";
+import SignUp from "./components/signupPage";
+import app from "./base";
+import { AuthProvider } from "./Auth";
 
 const Router = (props) => {
   return (
+    <AuthProvider>
     <BrowserRouter>
       <div className="jumbotron">
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-8 offset-2">
               <h1>
-                <Link to="/">Book Recommedations</Link>
+                <Link to="/home">Book Recommedations</Link>
               </h1>
             </div>
-            <div className="col-md-2">
-            <button type="button" class="btn btn-primary">Log In</button>
+            <div className="col-md-1">
+            <button  className="btn btn-dark" onClick={() => app.auth().signOut()}>
+              <Link to="/login">Sign Out</Link></button>
+            </div>
+            <div className="col-md-1">
+              <button className="btn btn-dark"> <Link to="/login">Log in</Link></button>
             </div>
           </div>
         </div>
         <Switch>
           <Route path="/posts/:post_id" component={CommentPage} />
-          <Route exact path="/" component={App} />
+          <Route exact path="/home" component={App} />
+          <Route exact path="/login" component={Login}/>
+          <Route exact path="/" component={SignUp}/>
           <Redirect from="*" to="/" />
         </Switch>
       </div>
     </BrowserRouter>
+    </AuthProvider>
   );
 };
 
