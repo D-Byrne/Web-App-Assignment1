@@ -59,8 +59,8 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 - / (public) - Displays SignUp page
 - /home (public) - Displays Home page 
-- /login - Displays Login page
-- /posts/:id - Displays post by id.
+- /login (public) - Displays Login page
+- /posts/:id (public) - Displays post by id.
 
 ## Storybook.
 
