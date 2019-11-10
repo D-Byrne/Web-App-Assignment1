@@ -68,7 +68,6 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 ## Authentication.
 
-. . . . Briefly explain the authentication method used by your app (e.g. JWT, Firebase) ). If user registration is not supported, mention test username/password pairs available . . . . . .
  - The app uses Firebase authentication. The authentication used was email/password authentication. The authentication supports sign up and log in. Emails ceated are stored by firebase.
 
 
