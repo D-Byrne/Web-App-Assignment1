@@ -68,8 +68,11 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 ## Authentication.
 
- - The app uses Firebase authentication. The authentication used was email/password authentication. The authentication supports sign up and log in. Emails ceated are stored by firebase.
+- The app uses Firebase authentication. The authentication used was email/password authentication. The authentication supports sign up and log in. Emails ceated are stored by firebase.
 
+## Independent learning.
+
+- The surge module is used to deploy the web app at: http://book-rec.surge.sh/
 
 [main]: ./img/main.png
 [detailsSignup]: ./img/detailsSignup.png

@@ -12,7 +12,7 @@ import { AuthProvider } from "./Auth";
 
 const Router = (props) => {
   return (
-    <AuthProvider>
+   <AuthProvider>
     <BrowserRouter>
       <div className="jumbotron">
         <div className="container-fluid">
