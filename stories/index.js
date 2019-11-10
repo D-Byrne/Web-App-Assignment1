@@ -19,18 +19,18 @@ const post = {
   comments: [],
   upvotes: 10
 };
-storiesOf("Hacker App/News Form", module).add("default", () => (
+storiesOf("Book Recommendation App/News Form", module).add("default", () => (
   <NewsForm handleAdd={action("Add new post")} />
 ));
 
-storiesOf("Hacker App/News Item", module)
+storiesOf("Book Recommendation App/News Item", module)
   .add("default", () => (
     <NewsItem post={post} upvoteHandler={action("upvoted")} />
   ))
   .add("No hyperlink", () => (
     <NewsItem post={{ ...post, link: "" }} upvoteHandler={action("upvoted")} />
   ));
-storiesOf("Hacker App/News List", module).add("default", () => {
+storiesOf("Book Recommendation App/News List", module).add("default", () => {
   const defaultPosts = [
     { ...post, id: 1, title: "Post 1", upvotes: 10 },
     { ...post, id: 2, title: "Post 2", upvotes: 20 },
@@ -40,7 +40,7 @@ storiesOf("Hacker App/News List", module).add("default", () => {
   return <NewsList posts={defaultPosts} />;
 });
 
-storiesOf("Hacker App/Comment page/Comment Form", module).add("default", () => (
+storiesOf("Book Recommendation App/Comment page/Comment Form", module).add("default", () => (
   <CommentForm post={post} addCommentHandler={action("comment added")} />
 ));
 
@@ -51,11 +51,11 @@ const comment = {
   upvotes: 10
 };
 
-storiesOf("Hacker App/Comment page/Comment", module).add("default", () => (
+storiesOf("Book Recommendation App/Comment page/Comment", module).add("default", () => (
   <Comment upvoteHandler={action("upvoted")} comment={comment} />
 ));
 
-storiesOf("Hacker App/Comment page/Comment list", module).add("default", () => {
+storiesOf("Book Recommendation App/Comment page/Comment list", module).add("default", () => {
   const defaultComments = [
     comment,
     { ...comment, author: "Jane Smith", upvotes: 3, id: 2 },
@@ -67,10 +67,10 @@ storiesOf("Hacker App/Comment page/Comment list", module).add("default", () => {
   );
 });
 
-storiesOf("Hacker App/Authentication/Login", module).add("default", () => {
+storiesOf("Book Recommendation App/Authentication/Login", module).add("default", () => {
   <Login />
 });
 
-storiesOf("Hacker App/Authentication/Signup", module).add("default", () => {
+storiesOf("Book Recommendation App/Authentication/Signup", module).add("default", () => {
   <SignUp />
 });
