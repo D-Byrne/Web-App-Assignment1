@@ -10,7 +10,6 @@ import Comment from "../src/components/comment";
 import CommentList from "../src/components/commentList";
 import Login from "../src/components/loginPage";
 import SignUp from "../src/components/signupPage";
-import { Router } from "@reach/router";
 
 const post = {
   id: 1,
@@ -66,4 +65,12 @@ storiesOf("Hacker App/Comment page/Comment list", module).add("default", () => {
   return (
     <CommentList upvoteHandler={action("upvoted")} comments={defaultComments} />
   );
+});
+
+storiesOf("Hacker App/Authentication/Login", module).add("default", () => {
+  <Login />
+});
+
+storiesOf("Hacker App/Authentication/Signup", module).add("default", () => {
+  <SignUp />
 });

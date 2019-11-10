@@ -20,7 +20,7 @@ export default class App extends Component {
   };
 
   render() {
-    let posts = _.sortBy(api.getAll(), post => -post.upvotes);
+   let posts = _.sortBy(api.getAll(), post => -post.upvotes);
     return (
       <div className="container-fluid" class="backClr">
         <div className="row">
