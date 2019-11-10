@@ -17,8 +17,9 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 ## Setup.
 
-- Use 'npm install' command
-- Use 'npm start' command to start web app on localhost:3000
+- Move to project folder.
+- Use 'npm install' command.
+- Use 'npm start' command to start web app on localhost:3000.
 
 ## Data Model Design.
 
