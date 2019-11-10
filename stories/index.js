@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { storiesOf } from "@storybook/react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { action } from "@storybook/addon-actions";
@@ -8,6 +8,10 @@ import NewsForm from "../src/components/newsForm/";
 import CommentForm from "../src/components/commentForm";
 import Comment from "../src/components/comment";
 import CommentList from "../src/components/commentList";
+import Login from "../src/components/loginPage";
+import SignUp from "../src/components/signupPage";
+import { Router } from "@reach/router";
+
 const post = {
   id: 1,
   title: "Post 1.",
@@ -19,6 +23,7 @@ const post = {
 storiesOf("Hacker App/News Form", module).add("default", () => (
   <NewsForm handleAdd={action("Add new post")} />
 ));
+
 storiesOf("Hacker App/News Item", module)
   .add("default", () => (
     <NewsItem post={post} upvoteHandler={action("upvoted")} />

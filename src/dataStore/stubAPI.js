@@ -127,6 +127,11 @@ class StubAPI {
         post.comments[index].upvotes += 1;
         }
     }
+
+    removePost(id){
+        let elements = _.remove(this.posts, post => post.id === id);
+        return elements;
+    }
 }
 
 export default new StubAPI();

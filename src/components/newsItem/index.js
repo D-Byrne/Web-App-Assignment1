@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default class NewsItem extends Component {
   handleVote = () => this.props.upvoteHandler(this.props.post.id);
+  handleRemove = () => this.props.removeHandler(this.props.post.id);
   render() {
     let line = this.props.post.link ? (
       <a href={this.props.post.link}>{this.props.post.title}</a>
@@ -17,6 +18,9 @@ export default class NewsItem extends Component {
         <span className="ptr" onClick={this.handleVote}>
           <FontAwesomeIcon icon={["fas", "thumbs-up"]} size="2x" />
           {` ${this.props.post.upvotes}`}
+        </span>
+        <span className="ptr" onClick={this.handleRemove}>
+          <FontAwesomeIcon icon={["fas", "trash-alt"]} size="2x" />
         </span>
         <span className="newsitem">
           {line}

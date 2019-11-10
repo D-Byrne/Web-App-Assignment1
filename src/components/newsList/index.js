@@ -7,7 +7,8 @@ export default class NewsList extends Component {
             (post,index) => 
                 <NewsItem key={index} 
                     post={post} 
-                    upvoteHandler={this.props.upvoteHandler} /> 
+                    upvoteHandler={this.props.upvoteHandler}
+                    removeHandler={this.props.removeHandler} /> 
             );
         return (
             <Fragment>
