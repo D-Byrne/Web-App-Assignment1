@@ -6,6 +6,13 @@ import _ from "lodash";
 import "./App.css";
 
 export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      sort: "votes"
+    }
+  }
+ 
   incrementUpvote = id => {
     api.upvote(id);
     this.setState({});
@@ -19,14 +26,33 @@ export default class App extends Component {
     this.setState({});
   };
 
+  sort = () => {
+    if(this.state.sort === "votes")      {
+      this.setState({sort:"year"});
+    }else{
+      this.setState({sort:"votes"})
+    }
+  };
+
   render() {
-   let posts = _.sortBy(api.getAll(), post => -post.upvotes);
+    let posts;
+    if(this.state.sort === "votes"){
+     posts = _.sortBy(api.getAll(), post => -post.upvotes);
+    }else{
+      posts = _.sortBy(api.getAll(), post => -post.year);
+    }
+
     return (
       <div className="container-fluid" class="backClr">
         <div className="row">
           <div className="col-md-8 offset-2 ">
             <Form handleAdd={this.addNewsItem} />
           </div>
+        </div>
+        <div className="colo-md-8 offset-2">
+          <p></p>
+        <button className="btn btn-primary" onClick={this.sort}>Sort year/upvotes</button>
+        <p></p>
         </div>
         <div>
           <div className="col-md-8 offset-2">
