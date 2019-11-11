@@ -73,7 +73,7 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 ## Independent learning.
 
-- The surge module is used to deploy the web app at: http://book-recommends.surge.sh
+- The surge module is used to deploy the web app at: http://book-recommend.surge.sh
 
 [main]: ./img/main.png
 [detailsSignup]: ./img/detailsSignup.png

@@ -20,7 +20,7 @@ const Router = (props) => {
           <div className="row">
             <div className="col-md-8 offset-2">
               <h1>
-                <Link to="/home">Book Recommedations</Link>
+                <Link to="/home">Book Recommendations</Link>
               </h1>
             </div>
             <div className="col-md-1">
