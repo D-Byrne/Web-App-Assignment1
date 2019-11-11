@@ -42,15 +42,15 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 ![][main]
 
->> Shows a post for each post in the datastore. The posts are sorted by upvotes. A post can be added, receive upvotes, and can be deleted. Posts can also receive comments which can be upvoted. Shows a card for each contact in the datastore. This contact list can be filtered by name and gender. A contact can be edited or deleted a contact. Users can use the sign out button to sign out of their accounts.
+>> Shows a post for each post in the datastore. The posts are sorted by upvotes. A post can be added, receive upvotes, and can be deleted. Posts can also receive comments which can be upvoted. Once a user logs out using the log out button they are sent the the login page.
 
 ![][detailsSignup]
 
->> The user is presented first with the sign up page. An email and password are input into the files and the user is registered. Once registered the user is sent to the home page.
+>> The user is presented first with the sign up page. An email and password are input into the fields and the user is registered. Once registered the user is sent to the home page.
 
 ![][detailsLogin]
 
->> The user can enter the email and password of a previously generated account to login. Oce the details are entered the user is taken to the home page.
+>> The user can enter the email and password of a previously registered account to login. Once the details are entered the user is taken to the home page.
 
 ![][detailsPostComment]
 
