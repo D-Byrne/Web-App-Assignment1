@@ -14,6 +14,7 @@ This is a book recommendation web app. The app allows users to share book recomm
 - Users can comment on posts.
 - Users can upvote comments.
 - Users can delete posts.
+- Posts can be sorted by upvotes or year.
 
 ## Setup.
 
@@ -68,7 +69,7 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 ## Authentication.
 
-- The app uses Firebase authentication. The authentication used was email/password authentication. The authentication supports sign up and log in. Emails ceated are stored by firebase.
+- The app uses Firebase authentication. The authentication used was email/password authentication. The authentication supports sign up and log in. Emails ceated are stored by Firebase.
 
 ## Independent learning.
 
