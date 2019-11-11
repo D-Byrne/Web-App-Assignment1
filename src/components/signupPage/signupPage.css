@@ -1,0 +1,23 @@
+.inputField{
+    width:800px; 
+    margin:0 auto;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .centerHeader{
+      text-align: center;
+  }
+  
+  .inputWidth{
+      width:100%;
+      text-align: center;
+  }
+
+  .buttonWidth{
+      width: 100%;
+  }

@@ -58,9 +58,9 @@ This is a book recommendation web app. The app allows users to share book recomm
 
 ## Routing.
 
-- / (public) - Displays SignUp page
-- /home (public) - Displays Home page 
-- /login (public) - Displays Login page
+- / (public) - Displays SignUp page.
+- /home (private) - Displays Home page when logged in.
+- /login (public) - Displays Login page.
 - /posts/:id (public) - Displays post by id.
 
 ## Storybook.

@@ -9,6 +9,7 @@ import Login from "./components/loginPage";
 import SignUp from "./components/signupPage";
 import app from "./base";
 import { AuthProvider } from "./Auth";
+import PrivateRoute from "./PrivateRoute";
 
 const Router = (props) => {
   return (
@@ -24,7 +25,7 @@ const Router = (props) => {
             </div>
             <div className="col-md-1">
             <button  className="btn btn-dark" onClick={() => app.auth().signOut()}>
-              <Link to="/login">Sign Out</Link></button>
+              Log Out</button>
             </div>
             <div className="col-md-1">
               <button className="btn btn-dark"> <Link to="/login">Log in</Link></button>
@@ -33,7 +34,7 @@ const Router = (props) => {
         </div>
         <Switch>
           <Route path="/posts/:post_id" component={CommentPage} />
-          <Route exact path="/home" component={App} />
+          <PrivateRoute exact path="/home" component={App} />
           <Route exact path="/login" component={Login}/>
           <Route exact path="/" component={SignUp}/>
           <Redirect from="*" to="/" />

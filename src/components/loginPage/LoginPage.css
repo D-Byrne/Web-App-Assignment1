@@ -1,3 +1,18 @@
-.inputEmail{
-    margin-left: 1000px;
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .centerHeader{
+    text-align: center;
+}
+
+.inputWidth{
+    width:100%;
+    text-align: center;
+}
+
+.buttonWidth{
+    width: 100%;
 }
