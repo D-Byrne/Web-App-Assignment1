@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter} from "react-router-dom";
 import { storiesOf } from "@storybook/react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { action } from "@storybook/addon-actions";
@@ -25,10 +26,12 @@ storiesOf("Book Recommendation App/News Form", module).add("default", () => (
 
 storiesOf("Book Recommendation App/News Item", module)
   .add("default", () => (
-    <NewsItem post={post} upvoteHandler={action("upvoted")} />
+   <BrowserRouter><NewsItem post={post} upvoteHandler={action("upvoted")} /></BrowserRouter>
   ))
   .add("No hyperlink", () => (
+    <BrowserRouter>
     <NewsItem post={{ ...post, link: "" }} upvoteHandler={action("upvoted")} />
+    </BrowserRouter>
   ));
 storiesOf("Book Recommendation App/News List", module).add("default", () => {
   const defaultPosts = [
@@ -37,7 +40,7 @@ storiesOf("Book Recommendation App/News List", module).add("default", () => {
     { ...post, id: 3, title: "Post 3", upvotes: 30 },
     { ...post, id: 4, title: "Post 4", upvotes: 40 }
   ];
-  return <NewsList posts={defaultPosts} />;
+  return <BrowserRouter><NewsList posts={defaultPosts} /></BrowserRouter>;
 });
 
 storiesOf("Book Recommendation App/Comment page/Comment Form", module).add("default", () => (
@@ -68,7 +71,7 @@ storiesOf("Book Recommendation App/Comment page/Comment list", module).add("defa
 });
 
 storiesOf("Book Recommendation App/Authentication/Login", module).add("default", () => {
-  <Login />
+ <BrowserRouter><Login /></BrowserRouter> 
 });
 
 storiesOf("Book Recommendation App/Authentication/Signup", module).add("default", () => {
