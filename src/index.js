@@ -10,6 +10,7 @@ import SignUp from "./components/signupPage";
 import app from "./base";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
+import AddPage from "./components/addPage"
 
 const Router = (props) => {
   return (
@@ -37,6 +38,7 @@ const Router = (props) => {
           <PrivateRoute exact path="/home" component={App} />
           <Route exact path="/login" component={Login}/>
           <Route exact path="/" component={SignUp}/>
+          <Route exact path="/addBook" component={AddPage}/>
           <Redirect from="*" to="/" />
         </Switch>
       </div>

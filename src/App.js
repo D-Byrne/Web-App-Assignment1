@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import NewsList from "./components/newsList/";
-import Form from "./components/newsForm/";
 import api from "./dataStore/stubAPI";
 import _ from "lodash";
 import "./App.css";
+import { Link } from "react-router-dom";
+
 
 export default class App extends Component {
   constructor(props){
@@ -34,6 +35,10 @@ export default class App extends Component {
     }
   };
 
+  redirectPage = () => {
+    this.history.pushState(null, 'addBook');
+  }
+
   render() {
     let posts;
     if(this.state.sort === "votes"){
@@ -46,12 +51,13 @@ export default class App extends Component {
       <div className="container-fluid" class="backClr">
         <div className="row">
           <div className="col-md-8 offset-2 ">
-            <Form handleAdd={this.addNewsItem} />
+          <button className="btn btn-dark buttnWidth"><Link to={"/addBook"}>Add Book</Link></button>
+
           </div>
         </div>
         <div className="colo-md-8 offset-2">
           <p></p>
-        <button className="btn btn-primary" onClick={this.sort}>Sort year/upvotes</button>
+        <button className="btn btn-dark" onClick={this.sort}>Sort year/upvotes</button>
         <p></p>
         </div>
         <div>
