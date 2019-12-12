@@ -56,9 +56,9 @@ export default class App extends Component {
 
   return (
       <div className="container">
-        <div className="colo-md-8 offset-2">
+        <div className="colo-md-8 offset-0">
           <p></p>
-        <button className="btn btn-dark" onClick={this.sort}>Sort year/upvotes</button>
+        <button className="btn btn-dark buttnWidth" onClick={this.sort}>Sort year/upvotes</button>
         <p></p>
         </div>
           <div className="row">
